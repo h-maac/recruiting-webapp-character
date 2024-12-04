@@ -8,3 +8,4 @@ export type Attributes = {
 };
 
 export type Class = "Barbarian" | "Wizard" | "Bard";
+export type Attribute = keyof Attributes;
