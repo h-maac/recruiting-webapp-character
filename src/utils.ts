@@ -8,4 +8,6 @@ export const createBaseCharacterSheet = (): Attributes => (ATTRIBUTE_LIST.reduce
 
 export const getAttributeEntries = (attributes: Attributes): [Attribute, number][] => (
     Object.entries(attributes) as [Attribute, number][]
-); 
+);
+
+export const _noop = () => {};

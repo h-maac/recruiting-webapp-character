@@ -1,19 +1,20 @@
 import React from 'react';
+import {_noop} from "../../utils";
 
 interface Props {
     label: string | number;
     valueLabel: string | number;
-    onChange: (increment: boolean) => void;
-
+    onChange?: (increment: boolean) => void;
+    isReadOnly?: boolean;
 }
 
-const ValueSliderControl = ({label, valueLabel, onChange}: Props) => {
+const ValueSliderControl = ({label, valueLabel, onChange = _noop, isReadOnly = false}: Props) => {
     return (
         <div>
-            <span>{label}</span>
-            <button onClick={() => onChange(false)}>-</button>
+            <span>{label}</span>:{' '}
+            {!isReadOnly && <button onClick={() => onChange(false)}>-</button>}
             <span>{valueLabel}</span>
-            <button onClick={() => onChange(true)}>-</button>
+            {!isReadOnly && <button onClick={() => onChange(true)}>-</button>}
         </div>
     );
 };
