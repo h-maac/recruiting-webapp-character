@@ -1,21 +1,13 @@
-import {useState} from 'react';
 import './App.css';
+import AttributeSheet from "./components/attribute-sheet/AttributeSheet";
 
 
 function App() {
-    const [num, setNum] = useState<number>(0);
     return (
         <div className="App">
-            <header className="App-header">
-                <h1>React Coding Exercise</h1>
-            </header>
+            <header className="App-header"></header>
             <section className="App-section">
-                <div>
-                    Value:
-                    {num}
-                    <button>+</button>
-                    <button>-</button>
-                </div>
+                <AttributeSheet/>
             </section>
         </div>
     );
