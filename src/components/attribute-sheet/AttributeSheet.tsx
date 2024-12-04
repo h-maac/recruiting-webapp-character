@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import ValueSliderControl from "../common/ValueSliderControl";
 import {Attributes} from "../../types";
-import {createBaseCharacterSheet} from "../../utils";
+import {createBaseCharacterSheet, getAbilityModifierFromAttr} from "../../utils";
 import ClassSelector from "../class-selector/ClassSelector";
 
 const AttributeSheet = () => {
@@ -17,7 +17,7 @@ const AttributeSheet = () => {
                 <ValueSliderControl
                     key={`character-attr-${attr}`}
                     label={attr}
-                    valueLabel={value}
+                    valueLabel={`${value} (${getAbilityModifierFromAttr(value)})`}
                     onChange={(increment) => updateAttribute(attr, increment)}
                 />
             ))}

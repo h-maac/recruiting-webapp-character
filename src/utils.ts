@@ -11,3 +11,8 @@ export const getAttributeEntries = (attributes: Attributes): [Attribute, number]
 );
 
 export const _noop = () => {};
+
+export const getAbilityModifierFromAttr = (attrValue: number): string => {
+    const modifier = Math.floor((attrValue - 10) / 2);
+    return (modifier > 0 ? '+' : '') + modifier;
+}
