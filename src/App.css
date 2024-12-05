@@ -30,6 +30,10 @@
   flex: 1 1 0;
   background-color: hsl(220deg 13% 13%);
   color: white;
+  
+  > div {
+    margin: 0 auto;  max-width: 800px;
+  }
 }
 
 .App-link {
