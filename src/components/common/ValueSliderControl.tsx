@@ -14,7 +14,7 @@ const ValueSliderControl = ({label, valueLabel, onChange = _noop, isReadOnly = f
             <span>{label}</span>:{' '}
             {!isReadOnly && <button onClick={() => onChange(false)}>-</button>}
             <span>{valueLabel}</span>
-            {!isReadOnly && <button onClick={() => onChange(true)}>-</button>}
+            {!isReadOnly && <button onClick={() => onChange(true)}>+</button>}
         </div>
     );
 };
